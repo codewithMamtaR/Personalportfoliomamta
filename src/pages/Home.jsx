@@ -35,7 +35,7 @@ return (
     </Box>
     
      {/*Third subcontainer */}       
-     <Box display="flex"  mb='2'  flexDirection={{ xs: 'column', md: 'row' }} 
+     <Box display="flex"  mb='2'  fontWeight= 'bold'  flexDirection={{ xs: 'column', md: 'row' }} 
               alignItems="center" gap={6} px={2} position='relative' zIndex={2}      
              sx={{ width: '100%', maxWidth: '1200px', mx: 'auto' ,marginTop:'5px'}}>
         <Box>

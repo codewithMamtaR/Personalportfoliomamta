@@ -159,7 +159,7 @@ useEffect(() => {
                 <ListItemText primary={text} />
               </ListItem>
             ))}   
-        
+        {/*
        
             <ListItem>
               <Button
@@ -171,7 +171,7 @@ useEffect(() => {
               >
                 Resume
               </Button>
-            </ListItem>
+            </ListItem>*/}
             <ListItem>
               <IconButton
                 component="a"
