@@ -71,25 +71,22 @@ return (
            textAlign: 'center', px: 2,  py: 4, marginTop:'100px', zIndex:0,  }}>
         <Box>
           <SchoolIcon fontSize="large" sx={{ mb: 1, color:'#4a0360',}}/>
-          <Typography variant='h2' sx={{    background: 'linear-gradient(90deg,#2e003e, #6a0572)',
-            WebkitBackgroundClip: 'text',WebkitTextFillColor: 'transparent',fontWeight: 'bold',
-            fontFamily:'Opensans',mb:3, zIndex:2,position:'relative',
+          <Typography variant='h2' sx={{    color:'black',
+            fontFamily: "'Tangerine',sans-serif, cursive",mb:3, zIndex:2,position:'relative',
               }}> 
                 Education
           </Typography>
-          <Typography variant='h5' sx={{      fontFamily:'Opensans', mb:3, zIndex:2,position:'relative' }}>
+          <Typography variant='h5' sx={{ fontFamily:"'Josefin Sans',sans-serif", mb:3, zIndex:2,position:'relative' }}>
              Bachelor of Engineering in Computer Science
           </Typography>
         </Box>
         
         <Box >
             <Box>
-              <Typography variant='h2' sx={{ background: 'linear-gradient(90deg,#2e003e, #6a0572)',
-            WebkitBackgroundClip: 'text',WebkitTextFillColor: 'transparent',fontWeight: 'bold',
-                fontFamily:'Opensans' , mb:3, zIndex:2,position:'relative' }}>
+              <Typography variant='h2' sx={{ fontWeight: 'bold',fontFamily: "'Tangerine', cursive" , mb:3, zIndex:2,position:'relative' }}>
                   Work Experience
               </Typography>
-              <Typography variant="h5" color='black' sx={{zIndex:2,position:'relative' }}>
+              <Typography variant="h5" color='black' sx={{zIndex:2,position:'relative',fontFamily:"'Josefin Sans',sans-serif" }}>
                       Experienced Computer Science educator with a proven track record of driving exceptional
                       results for high school and engineering students. Dedicated and committed to nurturing 
                       young talent while continuing to grow and innovate in the field.

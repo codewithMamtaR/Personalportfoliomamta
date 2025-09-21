@@ -3,6 +3,7 @@ import we from '../images/nat.webp';
 import po from '../images/mypo.webp';
 import cl from '../images/calcu.webp';
 import wa from '../images/wallet.webp';
+import ca from '../images/coaching.webp';
 import React, { useState, useRef } from 'react';
 import { Modal,Button, Card, CardMedia, CardContent } from '@mui/material';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
@@ -40,6 +41,13 @@ const projectsData = [
     description: 'Expense Tracker built with React.This app helps keeping track of our expenses .',
   },
   
+  {
+    id: 5,
+    title: 'Coaching App',
+    image: ca,
+    description: 'App for Coaching Institute built with React.This app helps students connect with a coaching institue.It lets user to know about details of this institute and know about the reviews of the students of this institute .',
+  },
+  
 ];
 
 export default function Projects() {
@@ -72,7 +80,7 @@ export default function Projects() {
   return (
     <>
     <Box sx={{marginTop:'100px', px: 4, py: 5 }}>
-      <Typography variant="h4"  sx={{background: 'linear-gradient(90deg,#2e003e, #6a0572)',
+      <Typography variant="h2"  sx={{fontFamily: "'Tangerine', cursive",background: 'linear-gradient(90deg,#2e003e, #6a0572)',
         WebkitBackgroundClip: 'text',WebkitTextFillColor: 'transparent',  fontWeight: 'bold',
         }} mb={3}>
           My Projects

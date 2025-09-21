@@ -117,7 +117,7 @@ useEffect(() => {
                       backgroundColor: '#388E3C',
                     },
                   }}
-                  href="/myresuu.pdf"
+                  href="/MamtaRathore.pdf"
                   download
                   startIcon={<DownloadIcon />}
                 >
@@ -165,7 +165,7 @@ useEffect(() => {
               <Button
                 variant="contained"
                 sx={{ backgroundColor: '#4CAF50'}}
-                href="/myresume.pdf"
+                href="/MamtaRathore.pdf"
                 download
                 startIcon={<DownloadIcon />}
               >
