@@ -117,7 +117,7 @@ const NavMenu = () => {
                       backgroundColor: '#388E3C',
                     },
                   }}
-                  href="/MamtaRathore.pdf"
+                  href="/Mamta.pdf"
                   download
                   startIcon={<DownloadIcon />}
                 >
@@ -165,7 +165,7 @@ const NavMenu = () => {
               <Button
                 variant="contained"
                 sx={{ backgroundColor: '#4CAF50'}}
-                href="/MamtaRathore.pdf"
+                href="/Mamta.pdf"
                 download
                 startIcon={<DownloadIcon />}
               >
