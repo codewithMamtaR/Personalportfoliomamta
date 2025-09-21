@@ -45,7 +45,7 @@ const projectsData = [
     id: 5,
     title: 'Coaching App',
     image: ca,
-    description: 'App for Coaching Institute built with React.This app helps students connect with a coaching institue.It lets user to know about details of this institute and know about the reviews of the students of this institute .',
+    description: 'App for Coaching Institute built with React.This app helps students connect with the institue.',
   },
   
 ];
