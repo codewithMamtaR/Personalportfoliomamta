@@ -34,11 +34,11 @@ const NavMenu = () => {
   const [showMenu, setShowMenu] = useState(true);//showMenu is true to begin with
   const [lastScrollY, setLastScrollY] = useState(0);//lastScrollY is 0 
   const [drawerOpen, setDrawerOpen] = useState(false);//drawerOpen is false
-  const theme = useTheme();{/*hook that gives access to current theme obj*/}
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));{/*is true for mobile else false */}
-//below is a hook which will show menu if user scrolls up and hides if scroll down.it will trigger handlescroll everytime user scrolls
-  
-useEffect(() => {
+  const theme = useTheme(); {/*hook that gives access to current theme obj*/ }
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); {/*is true for mobile else false */ }
+  //below is a hook which will show menu if user scrolls up and hides if scroll down.it will trigger handlescroll everytime user scrolls
+
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
@@ -79,7 +79,7 @@ useEffect(() => {
                 fontSize: { xs: '24px', sm: '32px', md: '48px' },
                 wordSpacing: { xs: '12px', sm: '4px', md: '0px' },
                 letterSpacing: { xs: '1.5px', sm: '0.5px', md: '0px' },
-                
+
                 color: 'black',
                 whiteSpace: 'nowrap',
               }}
@@ -106,7 +106,7 @@ useEffect(() => {
                   <EmailIcon sx={{ color: 'orange' }} />
                 </IconButton>
 
-                {/*
+
                 <Button
                   variant="contained"
                   sx={{
@@ -122,7 +122,7 @@ useEffect(() => {
                   startIcon={<DownloadIcon />}
                 >
                   Resume
-                </Button>*/}
+                </Button>
               </>
             )}
           </Box>
@@ -150,16 +150,16 @@ useEffect(() => {
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <IconButton onClick={() => setDrawerOpen(false)}>
               <CloseIcon />
-            
+
             </IconButton></Box>
-{/*making a list to show in mobile mode */}            
-            <List>
+          {/*making a list to show in mobile mode */}
+          <List>
             {['Home', 'About', 'Projects', 'Contact'].map((text) => (
-              <ListItem button key={text} component={NavLink}  style={navStyle}  to={`/${text.toLowerCase()}`} onClick={() => setDrawerOpen(false)}>
+              <ListItem button key={text} component={NavLink} style={navStyle} to={`/${text.toLowerCase()}`} onClick={() => setDrawerOpen(false)}>
                 <ListItemText primary={text} />
               </ListItem>
-            ))}   
-        {/*
+            ))}
+            
        
             <ListItem>
               <Button
@@ -171,7 +171,7 @@ useEffect(() => {
               >
                 Resume
               </Button>
-            </ListItem>*/}
+            </ListItem>
             <ListItem>
               <IconButton
                 component="a"
@@ -188,7 +188,7 @@ useEffect(() => {
               </IconButton>
             </ListItem>
           </List>
-          
+
         </Box>
       </Drawer>
     </>

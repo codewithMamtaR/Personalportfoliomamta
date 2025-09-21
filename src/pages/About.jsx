@@ -39,7 +39,7 @@ const SkillProgress = ({ skill, progress }) => {
 
                         return (
                                 <Box ref={ref} className="skill-container">{/*step:2 */}
-                                    <Typography variant='h4'>{skill}</Typography>
+                                    <Typography variant='h5'sx={{fontFamily:"'Josefin Sans',sans-serif"}} >{skill}</Typography>
                                     <Box className="progress-bar" ></Box>{/*Bar */}
                                 </Box>
                                 );
@@ -102,7 +102,7 @@ return (
           <Box  sx={{mt:10}}>
   
               <Typography variant='h3' sx={{fontFamily: "'Tangerine', cursive",mb:6,zIndex:2,
-                position:'relative',color:'#4a0360' }}>
+                position:'relative',color:'black' }}>
                   My skills
               </Typography>
   

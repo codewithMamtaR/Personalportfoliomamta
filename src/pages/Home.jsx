@@ -3,8 +3,8 @@ import { Typography, Box } from '@mui/material';
 import me from '../images/mamta.webp';
 import { Typewriter } from 'react-simple-typewriter';
 //Simple structure -this is home page with Main container holding three subcontainers.
-// First two containers are one below the other with display flex columnwise displaying this is mamta ,a teacher..
-// and then third container holds two containers side by side one is aboutme on the left and image on the right  .
+// First two containers are one below the other with display flex columnwise displaying This is Mamta, a teacher.....
+// and then third container holds two containers side by side one is about me on the right and image on the left  .
 
 export default function Home() {
 
@@ -28,7 +28,7 @@ return (
                   fontWeight: 'bold',fontSize: { xs: '1.875rem', sm: '3rem' }, }}>
                   <span style={{ color: 'black'}}>
                   <Typewriter words={['a Teacher', 'a Programmer', 'a Full Stack Web Developer']}
-                    loop={0} cursor cursorStyle="|" typeSpeed={100} deleteSpeed={60} delaySpeed={1000}/>
+                      loop={0} cursor cursorStyle="|" typeSpeed={100} deleteSpeed={60} delaySpeed={1000}/>
                   </span>
           </Typography>
       </Box>
@@ -51,7 +51,7 @@ return (
 
 
         <Box>
-              <Typography variant="h5"  color='black' sx={{fontFamily:"'Tangerine',sans-serif",
+              <Typography variant="h5"  color='black' sx={{fontFamily:"'Josefin Sans',sans-serif" ,
                 zIndex:2,position:'relative' }}>About me:I am  a passionate and curious learner with a growing 
                 interest in web development. Currently working on projects using technologies like React,Express . 
                 I enjoy exploring how frontend design and backend services come together to build interactive,
