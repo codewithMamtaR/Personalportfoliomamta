@@ -36,7 +36,7 @@ function App() {
                       bottom: 0,
            }}
          >
-                      <Typography variant="body2">&copy; built by mamta</Typography>
+                      <Typography variant="body2">&copy; built by Mamta</Typography>
          </Box>
          
     </BrowserRouter>

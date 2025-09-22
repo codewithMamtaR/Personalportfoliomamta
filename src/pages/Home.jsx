@@ -11,7 +11,7 @@ export default function Home() {
 return (
 <>
 {/*Main container or Box */}          
-<Box  sx={{position: 'relative',minHeight:'100vh',overflowX: 'hidden',color:'black',
+    <Box  sx={{position: 'relative',minHeight:'100vh',overflowX: 'hidden',color:'black',
           display: 'flex',flexDirection: 'column',justifyContent: 'center',
           alignItems: 'center',  textAlign: 'center',px: 2,py: 4,zIndex:0, }}>
     {/*First Subcontainer*/}
@@ -21,9 +21,9 @@ return (
     </Box>
 
      {/*second subcontainer */}     
-    <Box >
+    
       <Box sx={{textAlign: 'center',marginTop:'55px' }}>
-          <Typography variant="h3" sx={{fontFamily: "'Tangerine', cursive",mb: 3,
+          <Typography variant="h2" sx={{fontFamily: "'Tangerine', cursive",mb: 3,
            zIndex: 2,position: 'relative',color: 'white', // force white text
                   fontWeight: 'bold',fontSize: { xs: '1.875rem', sm: '3rem' }, }}>
                   <span style={{ color: 'black'}}>
@@ -32,12 +32,12 @@ return (
                   </span>
           </Typography>
       </Box>
-    </Box>
+    
     
      {/*Third subcontainer */}       
      <Box display="flex"    fontWeight= 'bold'  flexDirection={{ xs: 'column', md: 'row' }} 
               alignItems="center" gap={6} px={2} position='relative' zIndex={2}      
-             sx={{ marginTop:'10px ' ,width: '100%', maxWidth: '1200px', mx: 'auto' ,marginTop:'5px'}}>
+             sx={{ width: '100%', maxWidth: '1200px', mx: 'auto' ,marginTop:'3px'}}>
 
 
             <Box sx={{height: '100vh', display: 'flex',justifyContent: 'center',alignItems: 'center', }}>
@@ -52,12 +52,17 @@ return (
 
         <Box>
               <Typography variant="h5"  color='black' sx={{fontFamily:"'Josefin Sans',sans-serif" ,
-                zIndex:2,position:'relative' }}>About me:I am  a passionate and curious learner with a growing 
-                interest in web development. Currently working on projects using technologies like React,Express . 
+                zIndex:2,position:'relative' ,textAlign: { xs: "justify", sm: "left" }, 
+                fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" },
+                lineHeight: 1.6,
+                wordBreak: "break-word",
+                whiteSpace: "normal",
+                p: { xs: 2, sm: 0 }, }}>About me: I am a passionate and curious learner with a growing 
+                interest in web development.Currently working on projects using technologies like React,Express, 
                 I enjoy exploring how frontend design and backend services come together to build interactive,
-                 real-world applications. I am  always eager to pick up new skills and turn creative ideas into 
-                 functionaldigital experiences. Passionate about programming and software development, with 
-                 expertise in multiple languages including C,C++ and Python. Skilled in building standalone
+                 real-world applications.I am always eager to pick up new skills and turn creative ideas into 
+                 functional digital experiences.Passionate about programming and software development, with 
+                 expertise in multiple languages including C,C++ and Python.Skilled in building standalone
                   software and currently expanding expertise in full stack web development.
                  </Typography>
           </Box>

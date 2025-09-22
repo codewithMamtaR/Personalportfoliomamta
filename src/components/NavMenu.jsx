@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  IconButton,
-  Button,
-  Typography,
-  useMediaQuery,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText
-} from '@mui/material';
+import {AppBar,Toolbar, Box,IconButton,Button,Typography, useMediaQuery,Drawer,List,ListItem, 
+ListItemText} from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -39,9 +28,8 @@ const NavMenu = () => {
   //below is a hook which will show menu if user scrolls up and hides if scroll down.it will trigger handlescroll everytime user scrolls
 
   useEffect(() => {
-    const handleScroll = () => {
+      const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       setShowMenu(currentScrollY < lastScrollY);
       setLastScrollY(currentScrollY);
     };
@@ -61,97 +49,65 @@ const NavMenu = () => {
 
   return (
     <>
-      <AppBar
-        position="fixed"
-        sx={{
-          top: showMenu ? 0 : '-64px',
-          transition: 'top 0.3s ease-in-out',
-          backgroundColor: 'white',
-          boxShadow: 3,
-        }}
-      >
-        <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+      <AppBar position="fixed"
+        sx={{top: showMenu ? 0 : '-64px', transition: 'top 0.3s ease-in-out', 
+            backgroundColor: 'white',boxShadow: 3, }}>
+          <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
           {/* Left - Name and Icons */}
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Typography
-              sx={{
-                fontFamily: 'Fake Serif, sans-serif',
+            <Typography sx={{fontFamily: 'Fake Serif, sans-serif',
                 fontSize: { xs: '24px', sm: '32px', md: '48px' },
                 wordSpacing: { xs: '12px', sm: '4px', md: '0px' },
-                letterSpacing: { xs: '1.5px', sm: '0.5px', md: '0px' },
-
-                color: 'black',
+                letterSpacing: { xs: '1.5px', sm: '0.5px', md: '0px' }, color: 'black',
                 whiteSpace: 'nowrap',
-              }}
-            >
+              }}>
               Mamta Rathore
             </Typography>
-
+            {/* For larger screens Laptops and desktops */}
             {!isMobile && (
               <>
-                <IconButton
-                  component="a"
+                <IconButton  component="a"
                   href="https://www.linkedin.com/in/mamta-r-965032165"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedInIcon sx={{ color: 'blue' }} />
+                  aria-label="LinkedIn">
+                      <LinkedInIcon sx={{ color: 'blue' }} />
                 </IconButton>
                 <IconButton
                   component="a"
                   href="mailto:mamtarathore161344@gmail.com"
-                  aria-label="Email"
-                >
+                  aria-label="Email">
                   <EmailIcon sx={{ color: 'orange' }} />
                 </IconButton>
-
-
-                <Button
-                  variant="contained"
-                  sx={{
-                    backgroundColor: '#4CAF50',
+                <Button variant="contained" sx={{backgroundColor: '#4CAF50',
                     fontSize: { xs: '10px', sm: '12px' },
                     padding: { xs: '4px 8px', sm: '6px 16px' },
-                    '&:hover': {
-                      backgroundColor: '#388E3C',
-                    },
-                  }}
-                  href="/Mamta.pdf"
-                  download
-                  startIcon={<DownloadIcon />}
-                >
-                  Resume
+                    '&:hover': {backgroundColor: '#388E3C',},}}
+                    href="/Mamta.pdf" download startIcon={<DownloadIcon />}>
+                      Resume
                 </Button>
               </>
             )}
           </Box>
 
-          {/* Right - NavLinks or Menu */}
+          {/* Right - NavLinks or Menu  for small screens like mobiles*/}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            {isMobile ? (
-              <IconButton onClick={() => setDrawerOpen(true)}>
+            {isMobile ? ( <IconButton onClick={() => setDrawerOpen(true)}>
                 <MenuIcon />
-              </IconButton>
-            ) : (
-              <Box sx={{ display: 'flex', gap: 2 }}>{navLinks}</Box>
-            )}
+              </IconButton>)
+               : (<Box sx={{ display: 'flex', gap: 2 }}>{navLinks}</Box>)}
           </Box>
         </Toolbar>
       </AppBar>
 
       {/* Drawer for Mobile */}
-      <Drawer
-        anchor="right"
-        open={drawerOpen}
-        onClose={() => setDrawerOpen(false)}
-      >
+      <Drawer  anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
         <Box sx={{ width: 250, p: 2 }}>
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <IconButton onClick={() => setDrawerOpen(false)}>
               <CloseIcon />
-
-            </IconButton></Box>
+            </IconButton>
+          </Box>
           {/*making a list to show in mobile mode */}
           <List>
             {['Home', 'About', 'Projects', 'Contact'].map((text) => (
@@ -159,36 +115,22 @@ const NavMenu = () => {
                 <ListItemText primary={text} />
               </ListItem>
             ))}
-            
-       
-            <ListItem>
-              <Button
-                variant="contained"
-                sx={{ backgroundColor: '#4CAF50'}}
-                href="/Mamta.pdf"
-                download
-                startIcon={<DownloadIcon />}
-              >
-                Resume
-              </Button>
-            </ListItem>
-            <ListItem>
-              <IconButton
-                component="a"
-                href="https://www.linkedin.com/in/mamta-r-965032165"
-                target="_blank"
-              >
-                <LinkedInIcon sx={{ color: 'blue' }} />
-              </IconButton>
-              <IconButton
-                component="a"
-                href="mailto:mamtarathore161344@gmail.com"
-              >
-                <EmailIcon sx={{ color: 'orange' }} />
-              </IconButton>
-            </ListItem>
-          </List>
-
+              <ListItem>
+                <Button variant="contained" sx={{ backgroundColor: '#4CAF50'}} href="/Mamta.pdf"
+                  download startIcon={<DownloadIcon />}>
+                  Resume
+                </Button>
+              </ListItem>
+              <ListItem>
+                <IconButton component="a" href="https://www.linkedin.com/in/mamta-r-965032165"
+                  target="_blank" >
+                  <LinkedInIcon sx={{ color: 'blue' }} />
+                </IconButton>
+                <IconButton component="a" href="mailto:mamtarathore161344@gmail.com">
+                  <EmailIcon sx={{ color: 'orange' }} />
+                </IconButton>
+              </ListItem>
+            </List>
         </Box>
       </Drawer>
     </>
